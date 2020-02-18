@@ -46,10 +46,10 @@ _Essa abordagem foi escolhida com o intuito de atender o número máximo de entr
 ```
 5. Rode este comando para aplicar as alterações necessárias para criar o projeto:
 ```
-  $ terraform apply
+    $ terraform apply
 ```
 6. Preencha os inputs com valores adequados e confirme a criação dos recursos.
 
 7. Por fim, cole o ip retornado como output em um browser a fim de acessar a página padrão do Apache.
 
-Obs: Devido ao tamanho da aplicação, decidiu-se pela não utilização de módulos do Terraform. Analisando a solução, não foi possível encontrar vantagem em criar módulos, conforme explicado [aqui](https://www.terraform.io/docs/modules/index.html#when-to-write-a-module).
+Obs: Devido ao tamanho da aplicação, decidiu-se pela não utilização de módulos do Terraform. Analisando a solução, não encontrou-se vantagem em criar módulos, conforme explicado [aqui](https://www.terraform.io/docs/modules/index.html#when-to-write-a-module).
