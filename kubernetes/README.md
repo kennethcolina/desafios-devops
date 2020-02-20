@@ -33,4 +33,10 @@ Dentro deste repositório existe um subdiretório **app** e um **Dockerfile** qu
 
 ## Solução
 
+_Para o bom funcionamento da aplicação, é necessário que o addon `ingress` esteja habilitado no minikube._
+```
+    $ minikube start
+    $ minikube addons enable ingress
+```
+
 Rode o bash script `./run.sh` para criar os recursos.
