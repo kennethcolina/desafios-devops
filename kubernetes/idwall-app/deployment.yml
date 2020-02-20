@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: idwall-deployment
+  namespace: idwall-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: idwall
+  template:
+    metadata:
+      labels:
+        app: idwall
+    spec:
+      containers:
+      - name: idwall-app
+        image: kinnethy/idwall-app:v1.0.0
+        ports:
+          - name: nodejs-port
+            containerPort: 3000
+        env:
+          - name: NAME
+            value: Kenneth
+        livenessProbe:
+          httpGet:
+            path: /
+            port: nodejs-port
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: nodejs-port
+          initialDelaySeconds: 15
+          timeoutSeconds: 30

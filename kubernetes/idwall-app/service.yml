@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: idwall-service
+  namespace: idwall-test
+spec:
+  ports:
+  - port: 80
+    nodePort: 31001
+    targetPort: nodejs-port
+    protocol: TCP
+  selector:
+    app: idwall
+  type: NodePort

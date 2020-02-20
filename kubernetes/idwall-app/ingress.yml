@@ -1,0 +1,15 @@
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: idwall-rules
+  namespace: idwall-test
+spec:
+  rules:
+  - host: idwall-app.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: idwall-service
+          servicePort: 80

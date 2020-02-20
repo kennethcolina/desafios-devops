@@ -36,7 +36,7 @@ _Essa abordagem foi escolhida com o intuito de atender o número máximo de entr
 ```
 2. Vá até o diretório do terraform:
 ```
-    $ cd desafio-devops/terraform/
+    $ cd desafios-devops/terraform/
 ```
 3. Insira as suas credenciais da AWS no arquivo `terraform.tfvars/`:
 
