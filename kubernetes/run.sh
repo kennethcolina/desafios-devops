@@ -13,4 +13,4 @@ kubectl create -f ${APP_NAME}/deployment.yml
 kubectl create -f ${APP_NAME}/service.yml
 
 echo "${CLUSTER_IP} ${APP_URL}" | sudo tee -a /etc/hosts
-curl ${CLUSTER_IP} -H 'Host: ${APP_URL}'
+curl ${CLUSTER_IP} -H "Host: ${APP_URL}"
